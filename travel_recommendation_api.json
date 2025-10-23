@@ -6,12 +6,12 @@
         "cities": [
           {
             "name": "Sydney, Australia",
-            "imageUrl": "enter_your_image_for_sydney.jpg",
+            "imageUrl": "https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcTDiuGxeJyaG2u8E9yw9L9NKoa3fp3wyWLW1ytqwGBkDo-mVHqaiFE7rJ8qZxWMeMZ0RPMHAnlfrP3r12QEgxOwhEOPElhBf_iDggHs2g",
             "description": "A vibrant city known for its iconic landmarks like the Sydney Opera House and Sydney Harbour Bridge."
           },
           {
             "name": "Melbourne, Australia",
-            "imageUrl": "enter_your_image_for_melbourne.jpg",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcTk-n7iI1HfYFXU1O6beWsRxpmxMVV6VfVKnoyWchQ_GVaG0IR57MFd-lZwmKNI4x0mmLqQ6vB3GTb4mJD4EgDj6Nr4I9tjJ3YwDUWqMQ",
             "description": "A cultural hub famous for its art, food, and diverse neighborhoods."
           }
         ]
@@ -22,12 +22,12 @@
         "cities": [
           {
             "name": "Tokyo, Japan",
-            "imageUrl": "enter_your_image_for_tokyo.jpg",
+            "imageUrl": "https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcTrpbQKEA3dC69e8Mswv1Etb1vHxbrY8iqhdeNH9NrY4TrphfFadV_Jfyj7eaU7mDqPdO3nYd0NYfXDOr18JHdMJZ0QMkLxaX98mt70Bw",
             "description": "A bustling metropolis blending tradition and modernity, famous for its cherry blossoms and rich culture."
           },
           {
             "name": "Kyoto, Japan",
-            "imageUrl": "enter_your_image_for_kyoto.jpg",
+            "imageUrl": "https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcTy9gB98ilMcK_NKzksDSpZcyVPhFa48FixCrENvfUwwIlCvx9w9N-AqTKXJ9pmk3t-GQeqTTBDEge6iuKXD8SFWE3g3Ye7OTmonX0xnw",
             "description": "Known for its historic temples, gardens, and traditional tea houses."
           }
         ]
@@ -38,12 +38,12 @@
         "cities": [
           {
             "name": "Rio de Janeiro, Brazil",
-            "imageUrl": "enter_your_image_for_rio.jpg",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcS6kj5QwY8RGWGEtVNByEZ-n434XXR4lYdVtxMWnStsa95mrGYkzG1rSv7HlXKCFsNCGcY9L16y0PcjZWakRpERNCoAvd4_Zz6Ir8HKrg",
             "description": "A lively city known for its stunning beaches, vibrant carnival celebrations, and iconic landmarks."
           },
           {
             "name": "São Paulo, Brazil",
-            "imageUrl": "enter_your_image_for_sao-paulo.jpg",
+            "imageUrl": "https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcQCyrCqPCBAeLCW1dpTWVw_KAOMlPw7Z_TLiroEyYJuuzleWEVW0QdgvXhHNbmxEv68Vm59YRtCKYE3eOIO42QN-UgTX15GY4K35EOgCQ",
             "description": "The financial hub with diverse culture, arts, and a vibrant nightlife."
           }
         ]
@@ -53,13 +53,13 @@
       {
         "id": 1,
         "name": "Angkor Wat, Cambodia",
-        "imageUrl": "enter_your_image_for_angkor-wat.jpg",
+        "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/AG0ilSxc6nXlbYLSNO7LIVB8Q4bMt4geVljtgwx46rJqwV5foVHke91xjIFbjwKqniA6NqTZ5RAU44SuvXmEM1LHQs9PpphNrt8YlWFwX9ElU9eBinghJ9AaQAyXAGBb6-5ZY9EZuWk=s1360-w1360-h1020-rw",
         "description": "A UNESCO World Heritage site and the largest religious monument in the world."
       },
       {
         "id": 2,
         "name": "Taj Mahal, India",
-        "imageUrl": "enter_your_image_for_taj-mahal.jpg",
+        "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/AG0ilSzJOGFx7GiPK53x8YTAkDwYfmbyFYiPTHNJXjK2EBNkMCkHdlyKMKxB_pieTZdxRo4bwvOjZy94lY91TdnbXz3KooHPu2RH3WDvTC3w9f0o92S7xZvXj9rca2hbF3dE_lN3iQhT=s1360-w1360-h1020-rw",
         "description": "An iconic symbol of love and a masterpiece of Mughal architecture."
       }
     ],
@@ -67,13 +67,13 @@
       {
         "id": 1,
         "name": "Bora Bora, French Polynesia",
-        "imageUrl": "enter_your_image_for_bora-bora.jpg",
+        "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/AC9h4nrgSAJBtd82jWmxYVRmduGidHHpqhIMMoMRmS2X9BDbpz-ok6qZJt7KwcgtsPb94tlImDs12r3QJPty0Cu17Lj1k1AVfhChi9GTX7Esc3CYbVwgjDk5PE2efuFCnqIG53t9ZK7K=w675-h390-n-k-no",
         "description": "An island known for its stunning turquoise waters and luxurious overwater bungalows."
       },
       {
         "id": 2,
         "name": "Copacabana Beach, Brazil",
-        "imageUrl": "enter_your_image_for_copacabana.jpg",
+        "imageUrl": "https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcTliZzlA6Ag00YYguofVViZ8tgLCt0dOG9g_EBuK4u6ZoW9kBdFHHyV0T9N8O7QnrXje0fa3SazydlgHnSH5p1GUP6YxKjniZ4A0wif7Q",
         "description": "A famous beach in Rio de Janeiro, Brazil, with a vibrant atmosphere and scenic views."
       }
     ]
