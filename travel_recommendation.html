@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelBloom - Discover Your Next Adventure</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            color: white;
+            font-size: 1.8rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+
+        .search-container {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+        }
+
+        .search-container input {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 20px;
+            outline: none;
+            width: 200px;
+        }
+
+        .search-container button {
+            padding: 0.5rem 1.5rem;
+            border: none;
+            border-radius: 20px;
+            background: white;
+            color: #667eea;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .search-container button:hover {
+            transform: scale(1.05);
+        }
+
+        /* Home Page Styles */
+        .home-section {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23667eea" width="1200" height="600"/><path fill="%23764ba2" opacity="0.3" d="M0 400 Q 300 350 600 400 T 1200 400 V 600 H 0 Z"/></svg>');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .home-section h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .home-section p {
+            font-size: 1.3rem;
+            max-width: 600px;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .social-icons a {
+            color: white;
+            font-size: 1.5rem;
+            transition: transform 0.3s;
+            text-decoration: none;
+        }
+
+        .social-icons a:hover {
+            transform: scale(1.2);
+        }
+
+        /* About Us Page Styles */
+        .about-section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .about-section h2 {
+            color: #667eea;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .about-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 3rem;
+            text-align: center;
+            color: #555;
+        }
+
+        .team-section {
+            margin-top: 3rem;
+        }
+
+        .team-section h3 {
+            color: #764ba2;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .team-member {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .team-member:hover {
+            transform: translateY(-5px);
+        }
+
+        .team-member h4 {
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+
+        .team-member p {
+            color: #666;
+        }
+
+        /* Contact Us Page Styles */
+        .contact-section {
+            padding: 4rem 2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-section h2 {
+            color: #667eea;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .contact-form {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-family: inherit;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 1rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .submit-btn:hover {
+            transform: scale(1.02);
+        }
+
+        /* Results Section */
+        .results-section {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .results-section h2 {
+            color: #667eea;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .result-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .result-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .result-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .result-card-content {
+            padding: 1.5rem;
+        }
+
+        .result-card h3 {
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+
+        .result-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .time-display {
+            margin-top: 1rem;
+            padding: 0.5rem;
+            background: #f0f0f0;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .visit-btn {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.5rem 1.5rem;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 20px;
+            transition: background 0.3s;
+        }
+
+        .visit-btn:hover {
+            background: #764ba2;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .page {
+            display: none;
+        }
+
+        .page.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <a href="#" class="logo" onclick="showPage('home')">🌍 TravelBloom</a>
+        <div class="nav-links">
+            <a href="#" onclick="showPage('home')">Home</a>
+            <a href="#" onclick="showPage('about')">About Us</a>
+            <a href="#" onclick="showPage('contact')">Contact Us</a>
+            <div class="search-container" id="searchContainer">
+                <input type="text" id="searchInput" placeholder="Search destinations...">
+                <button onclick="searchDestinations()">Search</button>
+                <button onclick="clearResults()">Reset</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Page -->
+    <div id="home" class="page active">
+        <section class="home-section">
+            <h1>Discover Your Next Adventure</h1>
+            <p>Explore breathtaking beaches, ancient temples, and amazing countries around the world. Let us help you find your perfect destination.</p>
+            <div class="social-icons">
+                <a href="#" title="Facebook">📘</a>
+                <a href="#" title="Instagram">📷</a>
+                <a href="#" title="Twitter">🐦</a>
+                <a href="#" title="YouTube">📹</a>
+            </div>
+        </section>
+        <div id="results" class="results-section hidden"></div>
+    </div>
+
+    <!-- About Us Page -->
+    <div id="about" class="page">
+        <section class="about-section">
+            <h2>About Us</h2>
+            <div class="about-content">
+                <p>Welcome to TravelBloom, your trusted companion in discovering the world's most amazing destinations. We are passionate about travel and committed to helping you create unforgettable memories.</p>
+                <p>Our mission is to provide you with carefully curated travel recommendations that match your interests and preferences. Whether you're seeking relaxation on pristine beaches, spiritual enlightenment at ancient temples, or cultural immersion in diverse countries, we have something special for you.</p>
+            </div>
+            
+            <div class="team-section">
+                <h3>Our Team</h3>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <h4>Sarah Johnson</h4>
+                        <p>Founder & CEO</p>
+                    </div>
+                    <div class="team-member">
+                        <h4>Michael Chen</h4>
+                        <p>Head of Destinations</p>
+                    </div>
+                    <div class="team-member">
+                        <h4>Emily Rodriguez</h4>
+                        <p>Travel Content Director</p>
+                    </div>
+                    <div class="team-member">
+                        <h4>David Kim</h4>
+                        <p>Customer Experience Lead</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Contact Us Page -->
+    <div id="contact" class="page">
+        <section class="contact-section">
+            <h2>Contact Us</h2>
+            <form class="contact-form" onsubmit="handleSubmit(event)">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </section>
+    </div>
+
+    <script>
+        // Global variable to store fetched travel data
+        let travelData = null;
+
+        // Fetch data from JSON file when page loads
+        async function fetchTravelData() {
+            try {
+                const response = await fetch('travel_recommendation_api.json');
+                if (!response.ok) {
+                    throw new Error('Failed to fetch travel data');
+                }
+                travelData = await response.json();
+                console.log('Travel data loaded successfully:', travelData);
+            } catch (error) {
+                console.error('Error fetching travel data:', error);
+                alert('Error loading travel data. Please make sure travel_recommendation_api.json is in the same directory.');
+            }
+        }
+
+        // Load data when page loads
+        window.addEventListener('DOMContentLoaded', fetchTravelData);
+
+        // Page navigation
+        function showPage(pageName) {
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => page.classList.remove('active'));
+            document.getElementById(pageName).classList.add('active');
+            
+            // Hide search container on about and contact pages
+            const searchContainer = document.getElementById('searchContainer');
+            if (pageName === 'about' || pageName === 'contact') {
+                searchContainer.style.display = 'none';
+            } else {
+                searchContainer.style.display = 'flex';
+            }
+            
+            // Clear results when navigating away from home
+            if (pageName !== 'home') {
+                clearResults();
+            }
+        }
+
+        // Search functionality
+        function searchDestinations() {
+            const searchInput = document.getElementById('searchInput').value.toLowerCase().trim();
+            const resultsDiv = document.getElementById('results');
+            
+            if (!searchInput) {
+                alert('Please enter a search term');
+                return;
+            }
+            
+            let results = [];
+            
+            // Check for beach keywords
+            if (searchInput.includes('beach')) {
+                results = travelData.beaches;
+            }
+            // Check for temple keywords
+            else if (searchInput.includes('temple')) {
+                results = travelData.temples;
+            }
+            // Check for country keywords
+            else if (searchInput.includes('country') || searchInput.includes('countries')) {
+                results = travelData.countries.flatMap(country => 
+                    country.cities.map(city => ({
+                        ...city,
+                        countryName: country.name
+                    }))
+                );
+            }
+            
+            displayResults(results);
+        }
+
+        // Display results
+        function displayResults(results) {
+            const resultsDiv = document.getElementById('results');
+            
+            if (results.length === 0) {
+                resultsDiv.innerHTML = '<h2>No results found. Try searching for "beach", "temple", or "country".</h2>';
+                resultsDiv.classList.remove('hidden');
+                return;
+            }
+            
+            let html = '<h2>Recommended Destinations</h2><div class="results-grid">';
+            
+            results.forEach(item => {
+                const displayName = item.countryName ? `${item.name}, ${item.countryName}` : item.name;
+                const timeZone = item.timeZone;
+                
+                html += `
+                    <div class="result-card">
+                        <img src="${item.imageUrl}" alt="${displayName}">
+                        <div class="result-card-content">
+                            <h3>${displayName}</h3>
+                            <p>${item.description}</p>
+                            ${timeZone ? `<div class="time-display" id="time-${item.name.replace(/[^a-zA-Z0-9]/g, '')}">Loading time...</div>` : ''}
+                            <a href="#" class="visit-btn">Visit Now</a>
+                        </div>
+                    </div>
+                `;
+            });
+            
+            html += '</div>';
+            resultsDiv.innerHTML = html;
+            resultsDiv.classList.remove('hidden');
+            
+            // Update times for each destination
+            results.forEach(item => {
+                if (item.timeZone) {
+                    updateTime(item.name, item.timeZone);
+                }
+            });
+        }
+
+        // Update time display for a destination
+        function updateTime(name, timeZone) {
+            const elementId = `time-${name.replace(/[^a-zA-Z0-9]/g, '')}`;
+            const element = document.getElementById(elementId);
+            
+            if (element) {
+                const options = { 
+                    timeZone: timeZone, 
+                    hour12: true, 
+                    hour: 'numeric', 
+                    minute: 'numeric', 
+                    second: 'numeric' 
+                };
+                const localTime = new Date().toLocaleTimeString('en-US', options);
+                element.textContent = `Local time: ${localTime}`;
+                
+                // Update every second
+                setInterval(() => {
+                    const updatedTime = new Date().toLocaleTimeString('en-US', options);
+                    if (element) {
+                        element.textContent = `Local time: ${updatedTime}`;
+                    }
+                }, 1000);
+            }
+        }
+
+        // Clear results
+        function clearResults() {
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.innerHTML = '';
+            resultsDiv.classList.add('hidden');
+            document.getElementById('searchInput').value = '';
+        }
+
+        // Handle form submission
+        function handleSubmit(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            alert(`Thank you ${name}! We've received your message and will contact you at ${email} soon.`);
+            event.target.reset();
+        }
+
+        // Allow Enter key to trigger search
+        document.getElementById('searchInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                searchDestinations();
+            }
+        });
+    </script>
+</body>
+</html>
